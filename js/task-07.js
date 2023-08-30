@@ -3,7 +3,8 @@ input.setAttribute("type", "range");
 const text = document.querySelector("span#text");
 
 input.addEventListener("input", (e) => {
-  if (input.currentTarget) {
+  {
     text.style.fontSize++;
+    text.style.fontSize = `${input.value}px`;
   }
 });

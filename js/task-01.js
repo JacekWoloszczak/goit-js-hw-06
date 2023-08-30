@@ -1,20 +1,15 @@
-const allTheWorld = document.querySelector("#categories");
-// console.log(allTheWorld);
-const listWithId = document.querySelectorAll(".item").length;
-console.log("Number of categories:", listWithId);
+const listWithId = document.querySelector("#categories");
+const listItem = listWithId.querySelectorAll(".item");
+const headerH2List = listWithId.querySelectorAll("h2");
+const liIn = listWithId.querySelectorAll("li");
 
-const listH2 = document.querySelector(".item");
-const listH2Animals = listH2.childNodes[1];
-const listUlLength = listH2.getElementsByTagName("li").length;
-console.log("Category:", listH2Animals.textContent);
-console.log("Elements:", listUlLength);
-const listH2Products = listH2.nextElementSibling;
-const productsH2 = listH2Products.childNodes[1];
-console.log("Category:", productsH2.textContent);
-const productsLength = listH2Products.getElementsByTagName("li").length;
-console.log("Elements:", productsLength);
-const listH2Technology = allTheWorld.lastElementChild;
-const technologyH2 = listH2Technology.childNodes[1];
-console.log("Category:", technologyH2.textContent);
-const technologyLength = listH2Technology.getElementsByTagName("li").length;
-console.log("Elements:", technologyLength);
+// const listLi = document.querySelectorAll("ul li");
+
+console.log("Number of Categories:", listItem.length);
+
+headerH2List.forEach((i) => {
+  console.log("categories:", i.textContent);
+  for (let j = 0; j <= liIn.length; j++) {
+    console.log("Elements:", j);
+  }
+});

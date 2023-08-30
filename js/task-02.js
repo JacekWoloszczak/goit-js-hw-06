@@ -16,7 +16,7 @@ const ingredients = [
 // }
 
 const list = document.querySelector("ul#ingredients");
-const vegetable = ingredients.map((vege) => `<li>${vege}</li>`);
+const vegetable = ingredients.map((vege) => `<li>${vege}</li>`).join("");
 console.log(vegetable);
 
 list.innerHTML = vegetable;
