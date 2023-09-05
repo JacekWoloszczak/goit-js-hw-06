@@ -1,15 +1,20 @@
 const listWithId = document.querySelector("#categories");
-const listItem = listWithId.querySelectorAll(".item");
+
+let maybe = listWithId.querySelectorAll(".item");
+const more = document.querySelectorAll("li");
+
 const headerH2List = listWithId.querySelectorAll("h2");
-const liIn = listWithId.querySelectorAll("li");
 
-// const listLi = document.querySelectorAll("ul li");
+// console.log("Number of Categories:", maybe.length);
 
-console.log("Number of Categories:", listItem.length);
-
-headerH2List.forEach((i) => {
-  console.log("categories:", i.textContent);
-  for (let j = 0; j <= liIn.length; j++) {
-    console.log("Elements:", j);
-  }
-});
+for (let i = 0; i < maybe.length; i++) {
+  console.log("Number of Categories:", maybe.length);
+  headerH2List.forEach((j) => {
+    console.log(" Categories:", j.textContent);
+    for (let k = 0; k < more.length; k++) {
+      console.log("Elements:", more.length);
+      break;
+    }
+  });
+  break;
+}
