@@ -1,31 +1,26 @@
 const registerForm = document.querySelector(".login-form");
 
 registerForm.addEventListener("submit", handleSubmit);
-
+const resetinput = document.createElement("input");
+registerForm.append(resetinput);
+resetinput.textContent = "reset";
+resetinput.type = "reset";
 function handleSubmit(event) {
   event.preventDefault();
   const form = event.currentTarget;
-  const email = form.elements.email.value;
-  const password = form.elements.password.value;
+  const mail = form.elements.email.value;
+  const pass = form.elements.password.value;
+  const {
+    elements: { email, password },
+  } = form;
 
-  if (email === "" || password === "") {
+  if (mail === "" || pass === "") {
     return alert("Please fill in all the fields!");
   } else {
     registerForm.addEventListener("click", () => {
-      const sub1 = document.createElement("p");
-      sub1.style.backgroundColor = "red";
-      sub1.style.padding = "20px";
-      const out = document.createElement("button");
-      out.style.padding = "20px";
-
-      registerForm.append(sub1);
-
-      registerForm.append(out);
+      console.log(email.value, password.value);
+      // const input = registerForm.querySelector("input");
+      // input.addEventListener("input", () => {});
     });
   }
 }
-
-out.addEventListener("click", () => {
-  const out = document.querySelectorAll("button");
-  out.remove("sub1");
-});
