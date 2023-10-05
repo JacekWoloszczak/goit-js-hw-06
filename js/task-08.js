@@ -10,17 +10,17 @@ function handleSubmit(event) {
   const form = event.currentTarget;
   const mail = form.elements.email.value;
   const pass = form.elements.password.value;
-  const {
-    elements: { email, password },
-  } = form;
 
   if (mail === "" || pass === "") {
     return alert("Please fill in all the fields!");
   } else {
-    registerForm.addEventListener("click", () => {
-      console.log(email.value, password.value);
-      // const input = registerForm.querySelector("input");
-      // input.addEventListener("input", () => {});
-    });
+    // registerForm.addEventListener("click", () => {
+    //   console.log(email.value, password.value);
+    const data = {
+      elements: { mail, pass },
+    };
+    console.log(data);
+    // const input = registerForm.querySelector("input");
+    // input.addEventListener("input", () => {});
   }
 }
